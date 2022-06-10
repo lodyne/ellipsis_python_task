@@ -1,0 +1,20 @@
+{% extends 'short/base.html' %}
+{% load crispy_forms_tags %} 
+{% block content %}
+<div class="container d-flex justify-content-center mt-5">
+	<div class="col-md-4">
+        <legend class="border-bottom text-center mb-4">New URL</legend>
+		<div class="card">
+            
+            {% comment %} <h4 class="card-header"></h4> {% endcomment %}
+            <div class="card-body">
+                
+                {% comment %} {% for new in new_url %} {% endcomment %}
+                    {% comment %} <p class="card-text">{{ new_url }}</p>   {% endcomment %}
+                    <p class="card-text">{{ new_url|lookup:item.slug }}</p> 
+                {% comment %} {% endfor %} {% endcomment %}
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock content%}
