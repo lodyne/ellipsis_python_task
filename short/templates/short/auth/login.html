@@ -10,11 +10,14 @@
                     {% csrf_token %}
                     {{form | crispy}}
                 </fieldset>
-                <div class="form-group">
+                <span class="form-group">
                     <button type="submit" class="btn btn-outline-primary mb-0">
                         Login
                     </button>
-                </div>
+                    <small class="text-muted ml-2">
+                        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                    </small>
+                </span>
             </form>
 
             <div class="form-group">
